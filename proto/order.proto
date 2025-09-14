@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package order;
+
+service OrderService {
+  rpc ListOrders (Empty) returns (OrderList) {}
+  rpc FindOrder (FindOrderRequest) returns (Order) {}
+  rpc CreateOrder (CreateOrderRequest) returns (Order) {}
+}
+
+message Empty {}
+
+message FindOrderRequest {
+  int32 id = 1;
+}
+
+message CreateOrderRequest {
+  int32 id = 1;
+  int32 userId = 2;
+  string item = 3;
+}
+
+message Order {
+  int32 id = 1;
+  int32 userId = 2;
+  string item = 3;
+}
+
+message OrderList {
+  repeated Order orders = 1;
+}

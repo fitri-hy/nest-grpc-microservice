@@ -1,0 +1,29 @@
+{
+  "name": "nestgrpc",
+  "version": "1.0.0",
+  "description": " NestGRPC is an early modern microservice project based on NestJS, with gRPC support and a fallback REST API. ",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "ts-node src/main.ts",
+    "start:dev": "ts-node-dev --respawn src/main.ts",
+    "build": "tsc -p tsconfig.json",
+    "client": "ts-node test/client.ts"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.13.4",
+    "@grpc/proto-loader": "^0.8.0",
+    "@nestjs/common": "^11.1.6",
+    "@nestjs/core": "^11.1.6",
+    "@nestjs/microservices": "^11.1.6",
+    "@nestjs/platform-express": "^11.1.6",
+    "node-fetch": "^3.3.2",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.3",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.2"
+  }
+}
